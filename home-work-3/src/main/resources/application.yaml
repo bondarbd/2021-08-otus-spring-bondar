@@ -1,0 +1,7 @@
+configuration:
+  language: ru
+spring:
+  messages:
+    basename: i18n/messages
+    encoding: utf-8
+    fallback-to-system-locale: false
