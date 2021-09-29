@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2021-09-19--0002-book-to-author-and-genre
+      author: bondarbd
+      addColumn:
+        tableName: book
+        columns:
+          - column:
+              name: author_id
+              type: bigint
+              constraints:
+                nullable: false
+                foreignKeyName: fk_book_author
+                references: author(id)
+                deleteCascade: true
+          - column:
+              name: genre_id
+              type: bigint
+              constraints:
+                nullable: false
+                foreignKeyName: fk_book_genre
+                references: genre(id)
+                deleteCascade: true
+

@@ -1,0 +1,19 @@
+
+databaseChangeLog:
+  - changeSet:
+      id: 2021-09-19--0001-author
+      author: bondarbd
+      createTable:
+        tableName: author
+        columns:
+          - column:
+              name: id
+              type: bigint
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: pk_author
+          - column:
+              name: author_name
+              type: varchar(50)
