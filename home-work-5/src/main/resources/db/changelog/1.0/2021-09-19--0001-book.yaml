@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2021-09-19--0001-book
+      author: bondarbd
+      createTable:
+        tableName: book
+        columns:
+          - column:
+              name: id
+              type: bigint
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: pk_book
+          - column:
+              name: title
+              type: varchar(50)
+

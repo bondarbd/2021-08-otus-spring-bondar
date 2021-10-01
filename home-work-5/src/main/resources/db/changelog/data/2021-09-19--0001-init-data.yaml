@@ -1,0 +1,91 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2021-09-19--0001-init-data-author
+      author: bondarbd
+      context: main
+      runOnChange: true
+      loadUpdateData:
+        primaryKey: id
+        file: csv/2021-09-19--0001-author.csv
+        relativeToChangelogFile: true
+        separator: ;
+        quotChar: '"'
+        seperator: ';'
+        encoding: UTF-8
+        tableName: author
+
+  - changeSet:
+      id: 2021-09-19--0001-init-data-genre
+      author: bondarbd
+      context: main
+      runOnChange: true
+      loadUpdateData:
+        primaryKey: id
+        file: csv/2021-09-19--0001-genre.csv
+        relativeToChangelogFile: true
+        separator: ;
+        quotChar: '"'
+        seperator: ';'
+        encoding: UTF-8
+        tableName: genre
+
+  - changeSet:
+      id: 2021-09-19--0001-init-data-book
+      author: bondarbd
+      context: main
+      runOnChange: true
+      loadUpdateData:
+        primaryKey: id
+        file: csv/2021-09-19--0001-book.csv
+        relativeToChangelogFile: true
+        separator: ;
+        quotChar: '"'
+        seperator: ';'
+        encoding: UTF-8
+        tableName: book
+
+  - changeSet:
+      id: 2021-09-19--0001-init-data-author-test
+      author: bondarbd
+      context: test
+      runOnChange: true
+      loadUpdateData:
+        primaryKey: id
+        file: csv/test/2021-09-19--0001-author.csv
+        relativeToChangelogFile: true
+        separator: ;
+        quotChar: '"'
+        seperator: ';'
+        encoding: UTF-8
+        tableName: author
+
+  - changeSet:
+      id: 2021-09-19--0001-init-data-genre-test
+      author: bondarbd
+      context: test
+      runOnChange: true
+      loadUpdateData:
+        primaryKey: id
+        file: csv/test/2021-09-19--0001-genre.csv
+        relativeToChangelogFile: true
+        separator: ;
+        quotChar: '"'
+        seperator: ';'
+        encoding: UTF-8
+        tableName: genre
+
+  - changeSet:
+      id: 2021-09-19--0001-init-data-book-test
+      author: bondarbd
+      context: test
+      runOnChange: true
+      loadUpdateData:
+        primaryKey: id
+        file: csv/test/2021-09-19--0001-book.csv
+        relativeToChangelogFile: true
+        separator: ;
+        quotChar: '"'
+        seperator: ';'
+        encoding: UTF-8
+        tableName: book
+
